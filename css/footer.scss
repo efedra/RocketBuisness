@@ -1,0 +1,58 @@
+@import "fonts.scss";
+
+.footer {
+  height: 13.85vh;
+  background: rgba(8, 102, 79, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__padding {
+  padding: 0 20.42vw;
+}
+
+.about {
+  display: flex;
+  color: white;
+  @include adaptiv-font(16, 7);
+}
+
+.footer__about {
+  div {
+    margin-right: 1.563vw;
+  }
+
+  div:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer__icons {
+  img {
+    margin-right: 0.782vw;
+    width: 1.83vw;
+    height: 3.25vh;
+  }
+
+  img:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 567px) {
+  .footer__padding {
+    padding: 3vh 3vw;
+  }
+
+  .footer__icons {
+    img {
+      width: 3.83vw;
+    }
+  }
+
+}
+
+@media (max-width: 376px) {
+
+}

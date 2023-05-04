@@ -1,0 +1,142 @@
+@import "fonts.scss";
+
+.main-information {
+  display: flex;
+  height: 49.26vh;
+  overflow: hidden;
+}
+
+.main-information__description {
+  background: #F8FBFA;
+  padding: 13.33vh 8.54vw 14.81vh 20.42vw;
+
+  p {
+    @include adaptiv-font(19, 9);
+    color: #364844;
+  }
+}
+
+.main-information__image {
+  width: 49.48vw;
+  object-fit: cover;
+}
+
+.header1 {
+  @include adaptiv-font(35, 10);
+}
+
+.header1__margin {
+  margin-bottom: 1.30vh;
+}
+
+.check-up {
+  width: 59.406vw;
+  height: 42.308vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.check-up__spacing {
+  margin: 9.615vh auto 3.269vh;
+}
+
+.check-up__article {
+  background: #E2F0EF;
+  width: 31.944vw;
+  height: 42.308vh;
+  position: absolute;
+  z-index: 2;
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+
+  padding: 5.110vh 7.348vw 5.385vh 3.283vw;
+}
+
+.check-up__image {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  height: 99.9%;
+}
+
+.header3 {
+  @include adaptiv-font(20, 8)
+}
+
+.header3__spacing-checkup {
+  margin-bottom: 1.442vh;
+}
+
+.check-up__list {
+  list-style-position: inside;
+  @include adaptiv-font(16, 7);
+  margin-bottom: 3.17vh;
+
+  li {
+    margin-bottom: 0.96vh;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  li::marker {
+    color: rgba(31, 161, 129, 1);
+  }
+}
+
+.sale {
+  @include adaptiv-font(18, 7);
+  color: rgba(134, 134, 134, 1);
+  text-decoration: line-through;
+}
+
+.sale__spacing {
+  margin-left: 0.834vw;
+}
+
+.check-up__buttons {
+  margin-top: 2.50vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_sign_up_white {
+  color: rgba(13, 188, 145, 1);
+  border: 1px solid rgba(13, 188, 145, 1);
+  background: none;
+}
+
+
+.arrow {
+  display: flex;
+  justify-content: center;
+
+}
+
+.arrow__text {
+  padding: 0 1.876vw;
+  @include adaptiv-font(22, 14);
+}
+
+.arrow__text_gray {
+  color: rgba(192, 192, 192, 1);
+}
+
+.arrow__spacing {
+  margin-bottom: 8.85vh;
+}
+
+
+@media (max-width: 567px) {
+  .main-information {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .main-information__description {
+    padding: 5.25vh 4.800vw 10.79vh;
+  }
+  .main-information__image {
+    width: auto;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RocketBusiness</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/burger-menu.css">
+    <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+<header class="header header__padding">
+    <div class="burger">
+        <span></span> <!-- Для рисования-->
+    </div>
+    <img class="logo" src="image/LOGO.svg" ALT="LOGO">
+    <div class="location location__margin">
+        <img class="location__img" src="image/Vector.svg">
+        <div class="location__city">
+            <div>Ростов-на-Дону</div>
+            <div class="location__city_gray">ул. Ленина, 2Б</div>
+        </div>
+    </div>
+
+    <div class="header__right">
+        <div class="telephone">
+            <img class="telephone__image" src="image/whatsapp%201.svg" alt="Whats:">
+            <div class="telephone__number"> +7(863) 000 00 00</div>
+        </div>
+        <button class="button_sign_up">
+            Записаться на прием
+        </button>
+    </div>
+</header>
+<nav class="nav">
+    <div>О клинике</div>
+    <div>Услуги</div>
+    <div>Специалисты</div>
+    <div>Цены</div>
+    <div>Контакты</div>
+</nav>
+
+<div class="burger-menu burger-menu__padding">
+    <ul class="burger-menu__list">
+        <li>О клинике</li>
+        <li>Услуги</li>
+        <li>Специалисты</li>
+        <li>Цены</li>
+        <li>Контакты</li>
+    </ul>
+    <button class="burger__button"><b>Записаться на прием</b></button>
+</div>
+
+<main>
+    <div class="main-information">
+        <section class="main-information__description">
+            <h1 class="header1 header1__margin">Многопрофильная клиника для детей
+                и взрослых</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua</p>
+        </section>
+        <img class="main-information__image" src="image/Rectangle%209.svg">
+    </div>
+    <section class="check-up check-up__spacing">
+        <div class="check-up__article">
+            <article>
+                <h1 class="header1">Check-UP</h1>
+                <p class="header3 header3__spacing-checkup"> для мужчин</p>
+                <ul class="check-up__list">
+                    <li>Гормональный скрининг</li>
+                    <li>Тестостерон</li>
+                    <li>Свободный тестостерон</li>
+                    <li>Глобулин, связывающий половые гормоны</li>
+                </ul>
+                <p class="header3"><b>Всего 2800₽</b><span class="sale sale__spacing">3500₽</span></p>
+                <div class=check-up__buttons>
+                    <button class="button_sign_up">Записаться</button>
+                    <button class="button_sign_up button_sign_up_white">Подробнее</button>
+                </div>
+            </article>
+        </div>
+        <img class="check-up__image" src="image/doctor-working-table%201.svg" alt="doctor">
+    </section>
+    <div class="arrow arrow__spacing">
+        <img src="/image/Vector_left.svg">
+        <p class="arrow__text">1<span class="arrow__text_gray">/4</span></p>
+        <img src="/image/Vector_right.svg">
+    </div>
+</main>
+<footer class="footer footer__padding">
+    <img class="logo" src="image/LOGO_White.svg" ALT="LOGO">
+    <section class="about footer__about">
+        <div>О клинике</div>
+        <div>Услуги</div>
+        <div>Специалисты</div>
+        <div>Цены</div>
+        <div>Контакты</div>
+    </section>
+    <div class="icons footer__icons">
+        <img src="image/instagram%204%201.svg">
+        <img src="image/whatsapp%201%201.svg">
+        <img src="image/telegram%201.svg">
+    </div>
+</footer>
+<div class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <a class="popup__close">X</a>
+            <h2 class="popup__title"> Запись на прием</h2>
+            <div class="popup__text">
+                Введите свои данные, чтобы мы записали вас на прием
+            </div>
+            <form action="#" id="form">
+                <div class="popup__inputs">
+                    <label for="formName"></label>
+                    <input id='formName' name="name" class="popup__input" type="text" placeholder="Введите ФИО">
+                    <label for="formPhone"></label>
+                    <input id='formPhone' name="phone" class="popup__input _req _phone" type="text" placeholder="Введите номер телефона">
+                    <label for="formEmail"></label>
+                    <input id='formEmail' name="email" class="popup__input _req _email" type="text" placeholder="Введите email">
+
+                </div>
+                <div class="popup__button">
+                    <button type="submit" class="button_sign_up button_sign_up__modal-window">
+                        Записаться на прием
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/burger.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/form.js"></script>
+</body>
+</html>

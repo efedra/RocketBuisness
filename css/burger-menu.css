@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url("fonts/PTSansCaption-Regular.ttf") format("truetype");
+}
+.burger {
+  display: none;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.burger.active:before {
+  transform: rotate(45deg);
+  top: 1vh;
+}
+
+.burger.active:after {
+  transform: rotate(-45deg);
+  bottom: 2.2vh;
+}
+
+.burger.active span {
+  transform: scale(0);
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-menu__padding {
+  padding-left: 5.53vw;
+  padding-top: 13.5vh;
+}
+
+@media (max-width: 567px) {
+  .burger {
+    cursor: pointer;
+    grid-area: menu;
+    display: block;
+    position: relative;
+    width: 6.85vw;
+    height: 3.89vh;
+  }
+  .burger:before, .burger:after {
+    content: "";
+    background-color: rgb(31, 161, 129);
+    position: absolute;
+    width: 100%;
+    height: 0.56vh;
+    transition: all 0.3s ease 0s;
+  }
+  .burger:before {
+    top: 0;
+  }
+  .burger:after {
+    bottom: 0.38vh;
+  }
+  .burger span {
+    position: absolute;
+    background-color: rgb(31, 161, 129);
+    width: 100%;
+    height: 0.56vh;
+    top: 1.39vh;
+    transition: all 0.3s ease 0s;
+  }
+  .burger-menu {
+    display: block;
+    background-color: rgba(69, 146, 127, 0.9);
+    position: fixed;
+    left: 0;
+    top: -100%;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+  }
+  .burger-menu.active {
+    top: 0;
+  }
+  .burger-menu__list {
+    margin-bottom: 5.42vh;
+  }
+  .burger-menu__list li {
+    margin-bottom: 1.5vh;
+    list-style: none;
+  }
+  .burger-menu__list li:last-child {
+    margin-bottom: 0;
+  }
+  .burger__button {
+    width: 43vw;
+    height: 6.5vh;
+    color: rgb(31, 161, 129);
+    background: white;
+    border: none;
+    border-radius: 25px;
+  }
+}
+@media (max-width: 567px) and (max-width: 767px) {
+  .burger__button {
+    font-size: calc(11px + 15.3 * ((100vw - 320px) / 1920));
+  }
+}
+@media (max-width: 567px) and (min-width: 767px) {
+  .burger__button {
+    font-size: calc(11px + 9 * (100vw / 1920));
+  }
+}
+
+/*# sourceMappingURL=burger-menu.css.map */

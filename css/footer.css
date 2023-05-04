@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "PT Sans Caption";
+  src: url("fonts/PTSansCaption-Regular.ttf") format("truetype");
+}
+.footer {
+  height: 13.85vh;
+  background: rgb(8, 102, 79);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__padding {
+  padding: 0 20.42vw;
+}
+
+.about {
+  display: flex;
+  color: white;
+}
+@media (max-width: 767px) {
+  .about {
+    font-size: calc(7px + 15.3 * ((100vw - 320px) / 1920));
+  }
+}
+@media (min-width: 767px) {
+  .about {
+    font-size: calc(7px + 9 * (100vw / 1920));
+  }
+}
+
+.footer__about div {
+  margin-right: 1.563vw;
+}
+.footer__about div:last-child {
+  margin-right: 0;
+}
+
+.footer__icons img {
+  margin-right: 0.782vw;
+  width: 1.83vw;
+  height: 3.25vh;
+}
+.footer__icons img:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 567px) {
+  .footer__padding {
+    padding: 3vh 3vw;
+  }
+  .footer__icons img {
+    width: 3.83vw;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,170 @@
+@import "fonts.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "PT Sans Caption";
+}
+
+.header {
+  display: flex;
+  position: relative;
+  z-index: 4;
+  background: #F7F7F7;
+}
+
+
+.header__left {
+  display: flex;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header__padding {
+  padding: 1.154vh 20.42vw;
+}
+
+.logo {
+  width: 4.74vw;
+  height: 2.407vh;
+  display: flex;
+  align-self: center;
+}
+
+.location {
+  display: flex;
+
+  .location__img {
+    width: 0.63vw;
+    height: 1.667vh;
+    position: relative;
+    top: 1.389vh;
+    margin-right: 0.34vw;
+  }
+
+  .location__city {
+    margin: auto 0;
+    @include adaptiv-font(19, 8)
+  }
+}
+
+.location__city_gray {
+  color: rgba(134, 134, 134, 1);
+  @include adaptiv-font(19, 4)
+}
+
+.location__margin {
+  margin-left: 1.24vw;
+}
+
+
+.telephone {
+  display: flex;
+
+  .telephone__image {
+    width: 1.46vw;
+    height: 2.593vh;
+    margin-right: 0.47vw;
+  }
+
+  .telephone__number {
+    @include adaptiv-font(18, 11);
+    margin-right: 1.82vw;
+    align-self: center;
+  }
+}
+
+.button_sign_up {
+  width: 10.21vw;
+  padding: 1.06vh 0;
+  background: #0DBC91;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  @include adaptiv-font(15, 5);
+  cursor: pointer;
+
+}
+
+
+.nav {
+  background: rgba(31, 161, 129, 1);
+  height: 3.981vh;
+  padding: 0 20.42vw;
+  display: flex;
+  color: white;
+  align-items: center;
+  @include adaptiv-font(18, 9);
+
+  div {
+    margin-right: 1.56vw;
+  }
+
+  div:last-child {
+    margin-right: 0;
+
+  }
+
+}
+
+
+
+
+
+@media (max-width: 567px){
+
+  .header {
+    display: grid;
+    grid-template-columns:15% 25% 60%; //ширину первого так и оставить
+    grid-template-rows: 60% 40%;
+    grid-template-areas:
+            "menu logo telephone"
+            "menu logo city";
+    height: auto;
+  }
+
+  .header__padding {
+    padding: 1.94vh 3.15vw 0.9vh;
+  }
+
+  .header__right {
+    .button_sign_up {
+      display: none;
+    }
+  }
+
+  .logo {
+    width: 16.533vw;
+    height: 2.70vh;
+  }
+
+  .location__img, .telephone__image, .nav {
+    display: none;
+  }
+
+
+  .telephone {
+    grid-area: telephone;
+  }
+
+
+  .location {
+    grid-area: city;
+    margin-left: auto;
+    margin-right: 1.8vw;
+  }
+  .logo {
+    grid-area: logo;
+  }
+
+  .telephone__image, .location__city_gray {
+    display: none;
+  }
+
+}
+

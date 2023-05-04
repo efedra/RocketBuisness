@@ -1,0 +1,102 @@
+@import "fonts.scss";
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(143, 140, 140, 0.83);
+  top: 0;
+  left: 0;
+  z-index: 6;
+  opacity: 0;
+  visibility: hidden;
+  border: none;
+  outline: none;
+}
+
+.popup.active {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease 0s;
+}
+
+.popup__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 5.962vh 4.562vw;
+}
+
+.popup__content {
+  background: white;
+  padding: 3.3vh 2.6vw;
+  position: relative;
+  border-radius: 26px;
+}
+
+.popup__title {
+  @include adaptiv-font(35, 15);
+  margin-bottom: 4vh;
+  text-align: center;
+}
+
+.popup__text {
+  @include adaptiv-font(20, 15);
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.popup__close {
+  position: absolute;
+  top: 1.7vh;
+  right: 2vw;
+  @include adaptiv-font(25, 14);
+  cursor: pointer;
+}
+
+.popup__button {
+  display: flex;
+  justify-content: center;
+}
+
+.button_sign_up__modalwindow {
+  width: auto;
+  padding: 1.06vh 1vw;
+}
+
+.popup__inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3vh;
+
+  input {
+    margin-bottom: 1.5vh;
+  }
+
+  input:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.popup__input {
+  padding: 1vh 0.5vw 1vh 0.8vw;
+  border-radius: 13.5px;
+  border: 1px solid rgba(31, 161, 129, 1);
+  min-width: 32%;
+  @include adaptiv-font(20, 11);
+}
+
+._error{
+  box-shadow: 0 0 15px red;
+}
+
+
+@media (max-width: 567px) {
+  .button_sign_up__modal-window {
+    @include adaptiv-font(20, 11);
+    padding: 1.06vh 1.6vw;
+    width: auto;
+  }
+}
